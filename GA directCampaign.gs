@@ -1,7 +1,7 @@
 
   
 
-function runDemo_test() {
+function runDemo_direct() {
   try {
 
     var firstProfile = getFirstProfile();
@@ -10,62 +10,63 @@ function runDemo_test() {
      
       
     // spark47
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign==sparks47case');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign==sparks47case;ga:eventAction==DirectFromCampaign');
     if (results!=undefined) {    clear_sheet(0)  // only first time
         outputToSpreadsheet(results,'spark47case'); // scrive dati del profilo nello sheet3
     clear_sheet(1) // only first time
         //outputToSpreadsheet_tot_headers(results); // scrive headers e totali  del profilo nello sheet4
       //outputToSpreadsheet_tot(results,'spark47case');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,7,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,7,17);
                             }
      else { printempty('spark47Case'); }
     
-  
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign==sparks47formazione');
+    
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign==sparks47formazione;ga:eventAction==DirectFromCampaign');
     if (results!=undefined)  {   outputToSpreadsheet(results,'sparks47Lavoro');  //outputToSpreadsheet_tot(results,'sparks47Lavoro'); 
-                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,16,4);
+                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,16,17);
                              }
     else { printempty('spark47Lavoro'); }
     
-   // var results = getReportDataForProfile('ga:campaign',firstProfile,'ga:campaign=~sparks47lavoro');
+   // var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~sparks47lavoro');
    // if (results!=undefined) {outputToSpreadsheet(results,'sparks47Lavoro');    //outputToSpreadsheet_tot(results,'sparks47Lavoro');}
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign==sparks47motori');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign==sparks47motori;ga:eventAction==DirectFromCampaign');
     if (results!=undefined) { outputToSpreadsheet(results,'sparks47Motori');    //outputToSpreadsheet_tot(results,'sparks47Motori');
-                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,27,4);
+                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,27,17);
                             }
     else { printempty('spark47Motori'); }
-
+ 
     
-         
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign==sparks47comprovendo');
+       
+    
+    
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign==sparks47comprovendo;ga:eventAction==DirectFromCampaign');
     if (results!=undefined) { outputToSpreadsheet(results,'sparks47comprovendo');    //outputToSpreadsheet_tot(results,'sparks47comprovendo');    
-                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,38,4);
+                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,38,17);
                             }
     else { printempty('spark47Comprovendo'); }
     
-    
     //sparks47formazionemobile
-    
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign==sparks47formazionemobile');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign==sparks47formazionemobile;ga:eventAction==DirectFromCampaign');
     if (results!=undefined) { outputToSpreadsheet(results,'sparks47formazionemobile');    //outputToSpreadsheet_tot(results,'sparks47comprovendo');    
-                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,66,4);
+                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,66,17);
                             }
     else { printempty('sparks47formazionemobile'); }
     
     //sparks47casemobile
-        var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign==sparks47casemobile');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign==sparks47casemobile;ga:eventAction==DirectFromCampaign');
     if (results!=undefined) { outputToSpreadsheet(results,'sparks47casemobile');    //outputToSpreadsheet_tot(results,'sparks47comprovendo');    
-                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,67,4);
+                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,67,17);
                             }
     else { printempty('sparks47casemobile'); }
-   
+    
     //sparks47motorimobile
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign==sparks47motorimobile');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign==sparks47motorimobile;ga:eventAction==DirectFromCampaign');
     if (results!=undefined) { outputToSpreadsheet(results,'sparks47motorimobile');    //outputToSpreadsheet_tot(results,'sparks47comprovendo');    
-                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,68,4);
+                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,68,17);
                             }
     else { printempty('sparks47motorimobile'); }
+    
     
     ///////////// sparks47
     
@@ -73,23 +74,23 @@ function runDemo_test() {
     
       //Mitula
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~case.mitula,ga:campaign==Mitula');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~case.mitula,ga:campaign==Mitula;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'MitulaCase');      //outputToSpreadsheet_tot(results,'MitulaCase');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,9,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,9,17);
                             }
     else { printempty('MitulaCase'); }
     
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~lavoromitula');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~lavoromitula;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'MitulaLavoro');    //outputToSpreadsheet_tot(results,'MitulaLavoro'); 
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,20,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,20,17);
                             }
     else { printempty('MitulaLavoro'); }  
 
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~auto.mitula');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~auto.mitula;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'MitulaMotori');    //outputToSpreadsheet_tot(results,'MitulaMotori');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,30,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,30,17);
                             }
     else { printempty('MitulaMotori'); }
     //////////////// Mitula
@@ -97,21 +98,21 @@ function runDemo_test() {
     
     
     //Wickedin
-       var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~Wickedincase');
+       var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~Wickedincase;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {   outputToSpreadsheet(results,'WickedinCase');    //outputToSpreadsheet_tot(results,'WickedinCase'); 
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,10,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,10,17);
                             }
     else { printempty('WickedinCase'); }
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~Wickedinlavoro');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~Wickedinlavoro;ga:eventCategory==trafficoDirect');
     if (results!=undefined) { outputToSpreadsheet(results,'WickedinLavoro'); //outputToSpreadsheet_tot(results,'WickedinLavoro');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,19,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,19,17);
                             }
     else { printempty('WickedinLavoro'); }
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~Wickedinauto,ga:campaign=~Wickedinmoto');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~Wickedinauto,ga:campaign=~Wickedinmoto;ga:eventCategory==trafficoDirect');
       if (results!=undefined){ outputToSpreadsheet(results,'WickedinMotori');   //outputToSpreadsheet_tot(results,'WickedinMotori');  
-                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,29,4);
+                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,29,17);
                              }
     else { printempty('WickedinMotori'); }
     //////////////// Wickedin
@@ -121,94 +122,95 @@ function runDemo_test() {
     
     /// Criteo
     // criteo case
-    var results = getReportDataForProfile_case('ga:campaign',firstProfile,'ga:campaign=~lower_funnel');
+    var results = getReportDataForProfile_case_direct('ga:campaign',firstProfile,'ga:campaign=~lower_funnel;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'CriteoCase');    //outputToSpreadsheet_tot(results,'CriteoCase');         
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,5,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,5,17);
                             }
     else { printempty('CriteoCase'); }
     
-    var results = getReportDataForProfile_lavoro('ga:campaign',firstProfile,'ga:campaign=~lower_funnel');
+    var results = getReportDataForProfile_lavoro_direct('ga:campaign',firstProfile,'ga:campaign=~lower_funnel;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'CriteoLavoro');    //outputToSpreadsheet_tot(results,'CriteoLavoro'); 
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,15,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,15,17);
                             }
     else { printempty('Criteolavoro'); }
                              
 
-        var results = getReportDataForProfile_motori('ga:campaign',firstProfile,'ga:campaign=~lower_funnel');
+        var results = getReportDataForProfile_motori_direct('ga:campaign',firstProfile,'ga:campaign=~lower_funnel;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'CriteoMotori');    //outputToSpreadsheet_tot(results,'CriteoLavoro'); 
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,60,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,60,17);
                             }
     else { printempty('CriteoMotori'); }
 
     
-     var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~criteofb');
+     var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~criteofb;ga:eventCategory==trafficoDirect');
     if (results!=undefined) { outputToSpreadsheet(results,'CriteoFB');    //outputToSpreadsheet_tot(results,'CriteoFB'); 
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,48,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,48,17);
                             }
     else { printempty('CriteoFB'); }
     
-    //affinity overall
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~criteoaffinity');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~criteoaffinity;ga:eventCategory==trafficoDirect');
     if (results!=undefined) { outputToSpreadsheet(results,'CriteoAffinity'); //outputToSpreadsheet_tot(results,'CriteoAffinity')
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,49,4);                           
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,49,17);                              ;
                             }
-    else { printempty('CriteoAffinity'); }  
+    else { printempty('CriteoAffinity'); }
+    
     
     //affinity case
-    var results = getReportDataForProfile_case('ga:campaign',firstProfile,'ga:campaign=~criteoaffinity');
+    var results = getReportDataForProfile_case_direct('ga:campaign',firstProfile,'ga:campaign=~criteoaffinity;ga:eventCategory==trafficoDirect');
     if (results!=undefined) { outputToSpreadsheet(results,'CriteoAffinity case'); //outputToSpreadsheet_tot(results,'CriteoAffinity')
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,64,4);                           
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,64,17);                              ;
                             }
-    else { printempty('CriteoAffinity'); } 
-    
+    else { printempty('CriteoAffinity'); }
+    ///
     //affinity lavoro
-    var results = getReportDataForProfile_lavoro('ga:campaign',firstProfile,'ga:campaign=~criteoaffinity');
+    var results = getReportDataForProfile_lavoro_direct('ga:campaign',firstProfile,'ga:campaign=~criteoaffinity;ga:eventCategory==trafficoDirect');
     if (results!=undefined) { outputToSpreadsheet(results,'CriteoAffinity lavoro'); //outputToSpreadsheet_tot(results,'CriteoAffinity')
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,65,4);                           
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,65,17);                              ;
                             }
-    else { printempty('CriteoAffinity'); } 
+    else { printempty('CriteoAffinity lavoro'); }
     
     
     
-    var results = getReportDataForProfile_formazione('ga:campaign',firstProfile,'ga:campaign=~lower_funnel');
+    
+    var results = getReportDataForProfile_formazione_direct('ga:campaign',firstProfile,'ga:campaign=~lower_funnel;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'CriteoFormazione');  //outputToSpreadsheet_tot(results,'CriteoFormazione');   
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,35,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,35,17);
                             }
     else { printempty('CriteoFormazione'); }
     
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign==criteoemail');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign==criteoemail;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'CriteoEmail');  //outputToSpreadsheet_tot(results,'CriteoFormazione');   
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,63,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,63,17);
                             }
     else { printempty('CriteoEmail'); }
     
-    
-    var results = getReportDataForProfile_case('ga:campaign',firstProfile,'ga:campaign==criteoemail');
+    var results = getReportDataForProfile_case_direct('ga:campaign',firstProfile,'ga:campaign==criteoemail;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'CriteoEmail CASE');  //outputToSpreadsheet_tot(results,'CriteoFormazione');   
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,72,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,72,17);
                             }
-    else { printempty('CriteoEmail'); }
+    else { printempty('CriteoEmail case'); }
     
-    var results = getReportDataForProfile_lavoro('ga:campaign',firstProfile,'ga:campaign==criteoemail');
+    var results = getReportDataForProfile_lavoro_direct('ga:campaign',firstProfile,'ga:campaign==criteoemail;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'CriteoEmail LAVORO');  //outputToSpreadsheet_tot(results,'CriteoFormazione');   
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,73,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,73,17);
                             }
-    else { printempty('CriteoEmail'); }
+    else { printempty('CriteoEmail lavoro'); }
     
     
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign==criteoaudiencetargeting');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign==criteoaudiencetargeting;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'criteoaudiencetargeting');  //outputToSpreadsheet_tot(results,'CriteoFormazione');   
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,69,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,69,17);
                             }
     else { printempty('criteoaudiencetargeting'); }
     
     
     
+    
 // test only
 //    
-//    var results = getReportDataForProfile('ga:campaign',firstProfile,'ga:campaign=@lower_funnel,ga:campaign=@criteo');
+//    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=@lower_funnel,ga:campaign=@criteo');
 //    if (results!=undefined) {    outputToSpreadsheet(results,'CriteoAggregated');  //outputToSpreadsheet_tot(results,'CriteoFormazione');   
 //                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,63,4);
 //                            }
@@ -221,21 +223,21 @@ function runDemo_test() {
  
     //Trovit
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~trovit;ga:campaign!@auto.trovit;ga:campaign!@lavoro.trovit');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~trovit;ga:campaign!@auto.trovit;ga:campaign!@lavoro.trovit;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'TrovitCase');    //outputToSpreadsheet_tot(results,'TrovitCase');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,8,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,8,17);
                             }
     else { printempty('TrovitCase'); }
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~lavoro.trovit');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~lavoro.trovit;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'TrovitLavoro');    //outputToSpreadsheet_tot(results,'TrovitLavoro');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,21,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,21,17);
                             }
     else { printempty('TrovitLavoro'); }
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~auto.trovit');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~auto.trovit;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {outputToSpreadsheet(results,'TrovitMotori');    //outputToSpreadsheet_tot(results,'TrovitMotori');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,28,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,28,17);
                             }
     else { printempty('TrovitMotori'); }
     //////////////// Trovit
@@ -246,122 +248,120 @@ function runDemo_test() {
    
     
     
-    /// ADWORDS
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~immobiliar,ga:campaign=~affitto;ga:adwordsCampaignID!=(not set)');
-    if (results!=undefined) {    outputToSpreadsheet(results,'AdWordsCase');    //outputToSpreadsheet_tot(results,'AdWordsCase');
-                          outputToSpreadsheet_tot_row_ga_data(results,'',tab1,3,4);  
-                            }
-    else { printempty('AdWordsCase'); }
-   // var results = getReportDataForProfile_events('ga:eventaction',firstProfile,'ga:eventaction=~risposta;ga:adwordsCampaignID!=(not set)');
-   // if (results!=undefined) {    outputToSpreadsheet_events(results,'AdWordsCase');    //outputToSpreadsheet_tot_events(results,'AdWordsCase');}
-   // else { printempty_events('AdWordsCase'); }
-    
-    
-    
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~lavoro,ga:campaign=~commessi;ga:adwordsCampaignID!=(not set)');
-    if (results!=undefined) {outputToSpreadsheet(results,'AdWordsLavoro');    //outputToSpreadsheet_tot(results,'AdWordsLavoro');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,14,4);
-                            }
-    else { printempty('AdWordsLavoro'); }
-    
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~automotive;ga:adwordsCampaignID!=(not set)');
-    if (results!=undefined) {    outputToSpreadsheet(results,'AdWordsMotori');    //outputToSpreadsheet_tot(results,'AdWordsMotori');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,26,4);
-                            }
-    else { printempty('AdWordsMotori'); }
-    
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~formazione;ga:adwordsCampaignID!=(not set)');
-    if (results!=undefined) {outputToSpreadsheet(results,'AdWordsFormazione');    //outputToSpreadsheet_tot(results,'AdWordsFormazione');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,33,4);
-                            }
-    else { printempty('AdWordsFormazione'); }
-    
-    
-     var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~Comprovendo;ga:adwordsCampaignID!=(not set)');
-    if (results!=undefined) {  outputToSpreadsheet(results,'AdWordsComproVendo');    //outputToSpreadsheet_tot(results,'AdWordsComproVendo'); 
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,37,4);
-                            }
-     else { printempty('AdWordsComprovendo'); }
-    
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~servizi -;ga:adwordsCampaignID!=(not set)');
-    if (results!=undefined) {    outputToSpreadsheet(results,'AdWordsServizi');    //outputToSpreadsheet_tot(results,'AdWordsServizi');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,41,4);
-                            }
-    else { printempty('AdWordsServizi'); }
-    
-   // adv generico deve contenere tutto ciò che non è IMMOBILIARE e LAVORO
-    // https://analytics.google.com/analytics/web/#report/advertising-adwords-accounts/a3004501w5587142p43015466/%3F_u.date00%3D20170301%26_u.date01%3D20170331/
-    
-     var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign!@immobiliar;ga:campaign!@affitto;ga:campaign!@commessi;ga:campaign!@lavoro;ga:campaign!@automotive;ga:campaign!@formazione;ga:campaign!@Comprovendo;ga:campaign!@servizi -;ga:adwordsCampaignID!=(not set)');
-    if (results!=undefined) {outputToSpreadsheet(results,'AdWordsGenerico');   //outputToSpreadsheet_tot(results,'AdWordsGenerico');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,52,4);
-                            }
-    else { printempty('AdWordsGenerico'); }
- 
- /////////////ADWORDS
-    
-   
+//    /// ADWORDS
+//    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~immobiliar;ga:adwordsCampaignID!=(not set)');
+//    if (results!=undefined) {    outputToSpreadsheet(results,'AdWordsCase');    //outputToSpreadsheet_tot(results,'AdWordsCase');
+//                          outputToSpreadsheet_tot_row_ga_data(results,'',tab1,3,4);  
+//                            }
+//    else { printempty('AdWordsCase'); }
+//   // var results = getReportDataForProfile_events('ga:eventaction',firstProfile,'ga:eventaction=~risposta;ga:adwordsCampaignID!=(not set)');
+//   // if (results!=undefined) {    outputToSpreadsheet_events(results,'AdWordsCase');    //outputToSpreadsheet_tot_events(results,'AdWordsCase');}
+//   // else { printempty_events('AdWordsCase'); }
+//    
+//    
+//    
+//    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~lavoro;ga:adwordsCampaignID!=(not set)');
+//    if (results!=undefined) {outputToSpreadsheet(results,'AdWordsLavoro');    //outputToSpreadsheet_tot(results,'AdWordsLavoro');
+//                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,14,4);
+//                            }
+//    else { printempty('AdWordsLavoro'); }
+//    
+//    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~automotive;ga:adwordsCampaignID!=(not set)');
+//    if (results!=undefined) {    outputToSpreadsheet(results,'AdWordsMotori');    //outputToSpreadsheet_tot(results,'AdWordsMotori');
+//                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,26,4);
+//                            }
+//    else { printempty('AdWordsMotori'); }
+//    
+//    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~formazione;ga:adwordsCampaignID!=(not set)');
+//    if (results!=undefined) {outputToSpreadsheet(results,'AdWordsFormazione');    //outputToSpreadsheet_tot(results,'AdWordsFormazione');
+//                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,33,4);
+//                            }
+//    else { printempty('AdWordsFormazione'); }
+//    
+//    
+//     var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~Comprovendo;ga:adwordsCampaignID!=(not set)');
+//    if (results!=undefined) {  outputToSpreadsheet(results,'AdWordsComproVendo');    //outputToSpreadsheet_tot(results,'AdWordsComproVendo'); 
+//                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,37,4);
+//                            }
+//     else { printempty('AdWordsComprovendo'); }
+//    
+//    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~servizi -;ga:adwordsCampaignID!=(not set)');
+//    if (results!=undefined) {    outputToSpreadsheet(results,'AdWordsServizi');    //outputToSpreadsheet_tot(results,'AdWordsServizi');
+//                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,41,4);
+//                            }
+//    else { printempty('AdWordsServizi'); }
+//    
+//    
+//     var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign!@immobiliar;ga:campaign!@lavoro;ga:campaign!@automotive;ga:campaign!@formazione;ga:campaign!@Comprovendo;ga:campaign!@servizi -;ga:adwordsCampaignID!=(not set)');
+//    if (results!=undefined) {outputToSpreadsheet(results,'AdWordsGenerico');   //outputToSpreadsheet_tot(results,'AdWordsGenerico');
+//                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,52,4);
+//                            }
+//    else { printempty('AdWordsGenerico'); }
+// 
+// /////////////ADWORDS
+//    
+//   
                              
     //Yahooadv
-    var results = getReportDataForProfile_original('ga:source',firstProfile,'ga:source=~yahooadv');
+    var results = getReportDataForProfile_direct('ga:source',firstProfile,'ga:source=~yahooadv;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'YahooAdv');    //outputToSpreadsheet_tot(results,'YahooAdv');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,4,4); 
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,4,17); 
                             }
     else { printempty('YahooAdv'); }
     ////Yahooadv
     
     //Yahoo Native
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~native');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~native;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'YahooNative');    //outputToSpreadsheet_tot(results,'YahooNative');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,47,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,47,17);
                             }
     else { printempty('YahooNative'); }
     ////Yahoo Native
     
     //Tuttitalia
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:source=~tuttitalia');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:source=~tuttitalia;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'Tuttitalia');    //outputToSpreadsheet_tot(results,'Tuttitalia');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,50,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,50,17);
                             }
     else { printempty('Tuttitalia'); }
     ////Tuttitalia
     
     //-----
      // indeed
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~indeed');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~indeed;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'Indeed');    //outputToSpreadsheet_tot(results,'Indeed');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,18,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,18,17);
                             }
     else { printempty('Indeed'); }
     /////indeed
     
     //Immobiliare
-    var results = getReportDataForProfile_original('ga:source',firstProfile,'ga:source=~immobiliare.it');
+    var results = getReportDataForProfile_direct('ga:source',firstProfile,'ga:source=~immobiliare.it;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'immobiliare.it');    //outputToSpreadsheet_tot(results,'Immobiliare.it');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,6,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,6,17);
                             }
     else { printempty('Immobiliare.it'); }
     ////Immobiliare
     
      // libero
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~^libero');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~^libero;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'Libero');    //outputToSpreadsheet_tot(results,'Libero');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,45,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,45,17);
                             }
     else { printempty('Libero'); }
     /////libero
     
     // tiscali
-    var results = getReportDataForProfile_original('ga:source',firstProfile,'ga:source=~(tiscaliadv|^tiscali$)');  //(tiscaliadv|^tiscali$)
+    var results = getReportDataForProfile_direct('ga:source',firstProfile,'ga:source=~(tiscaliadv|^tiscali$);ga:eventCategory==trafficoDirect');  //(tiscaliadv|^tiscali$)
     if (results!=undefined) {    outputToSpreadsheet(results,'Tiscali');    //outputToSpreadsheet_tot(results,'Tiscali');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,46,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,46,17);
                             }
     else { printempty('Tiscali'); }
     /////tiscali
    
     /*
      // criteotest
-    var results = getReportDataForProfile('ga:campaign',firstProfile,'ga:campaign=~criteotest');
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~criteotest');
     if (results!=undefined) {    outputToSpreadsheet(results,'criteotest');    //outputToSpreadsheet_tot(results,'criteotest');
                             
                             }
@@ -373,76 +373,76 @@ function runDemo_test() {
     
     
     //Gohome
-       var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~gohome');
+       var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~gohome;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {    outputToSpreadsheet(results,'gohome');    //outputToSpreadsheet_tot(results,'gohome');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,12,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,12,17);
                             }
     else { printempty('GoHome'); }
     //////Gohome
     
       //Jobtome
-       var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~jobtome_paid');
+       var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~jobtome_paid;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {outputToSpreadsheet(results,'jobtome_paid');    //outputToSpreadsheet_tot(results,'jobtome_paid');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,22,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,22,17);
                             }
     else { printempty('jobtome_paid'); }
     //////Jobtome
     
       //Jooble
-       var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~Jooble');
+       var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~Jooble;ga:eventCategory==trafficoDirect');
     if (results!=undefined) { outputToSpreadsheet(results,'Jooble');    //outputToSpreadsheet_tot(results,'Jooble');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,23,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,23,17);
                             }
     else { printempty('Jooble'); }
     //////Jooble
     
         //Nestoria
-       var results = getReportDataForProfile_original('ga:source',firstProfile,'ga:source=~Nestoria');
+       var results = getReportDataForProfile_direct('ga:source',firstProfile,'ga:source=~Nestoria;ga:eventCategory==trafficoDirect');
     if (results!=undefined) { outputToSpreadsheet(results,'Nestoria');    //outputToSpreadsheet_tot(results,'Nestoria');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,11,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,11,17);
                             }
     else { printempty('Nestoria'); }
     //////Nestoria
     
     //Careerjet
-       var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~Careerjet');
+       var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~Careerjet;ga:eventCategory==trafficoDirect');
     if (results!=undefined) { outputToSpreadsheet(results,'Careerjet');    //outputToSpreadsheet_tot(results,'Careerjet');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,24,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,24,17);
                             }
     else { printempty('Careerjet'); }
     //////Careerjet
    
      //Autoxy
-       var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~Autoxy');
+       var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~Autoxy;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {outputToSpreadsheet(results,'Autoxy');    //outputToSpreadsheet_tot(results,'Autoxy');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,31,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,31,17);
                             }
     else { printempty('Autoxy'); }
     //////Autoxy
     
       //Splio
    
-     var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~alert');
+     var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~alert;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {outputToSpreadsheet(results,'Splio');    //outputToSpreadsheet_tot(results,'Splio');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,53,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,53,17);
                             }
     else { printempty('Splio'); }
     
     //////Splio
     
        //jobrapido
-        var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~jobrapido');
+        var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~jobrapido;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {outputToSpreadsheet(results,'jobrapido');    //outputToSpreadsheet_tot(results,'jobrapido');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,17,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,17,17);
                             }
     else { printempty('jobrapido'); }
     
     //////jobrapido
     
        //in-vendita.it r=61
-        var results = getReportDataForProfile_original('ga:source',firstProfile,'ga:source=~in-vendita.it');
+        var results = getReportDataForProfile_direct('ga:source',firstProfile,'ga:source=~in-vendita.it;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {outputToSpreadsheet(results,'in-vendita.it');    //outputToSpreadsheet_tot(results,'jobrapido');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,61,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,61,17);
                             }
     else { printempty('in-vendita.it'); }
     
@@ -451,12 +451,16 @@ function runDemo_test() {
     
     //bancalavoroRU r=62
     
-      var results = getReportDataForProfile_original('ga:source',firstProfile,'ga:source=~bancalavoroRU');
+      var results = getReportDataForProfile_direct('ga:source',firstProfile,'ga:source=~bancalavoroRU;ga:eventCategory==trafficoDirect');
     if (results!=undefined) {outputToSpreadsheet(results,'bancalavoroRU');    //outputToSpreadsheet_tot(results,'jobrapido');
-                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,62,4);
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,62,17);
                             }
     else { printempty('bancalavoroRU'); }
     //bancalavoroRU r=62
+    
+    
+    
+    
     
     
     
@@ -530,7 +534,7 @@ function clear_sheet(sheet_num) {
 
 
 
-function getReportDataForProfile_original(tipo,firstProfile,filters) {
+function getReportDataForProfile_direct(tipo,firstProfile,filters) {
 
   var profileId = "43015466";  // profilo che si trova in https://ga-dev-tools.appspot.com/explorer/?metrics=ga%253Asessions%252Cga%253Apageviews
   //var profileId = firstProfile.getId();
@@ -564,7 +568,7 @@ var endDate = scriptProperties.getProperty('end_date');
       tableId,                    // Table id (format ga:xxxxxx).
       startDate,                  // Start-date (format yyyy-MM-dd).
       endDate,                    // End-date (format yyyy-MM-dd).
-      'ga:sessions,ga:pageviewsPerSession,ga:bounceRate,ga:percentNewSessions', // Comma seperated list of metrics.
+      'ga:sessions', // Comma seperated list of metrics.
       optArgs);
 
   if (results.getRows()) {
@@ -577,7 +581,7 @@ var endDate = scriptProperties.getProperty('end_date');
 }
 
 
-function getReportDataForProfile_case(tipo,firstProfile,filters) {
+function getReportDataForProfile_case_direct(tipo,firstProfile,filters) {
 
   var profileId = "51520003";  // CASE profilo che si trova in https://ga-dev-tools.appspot.com/explorer/?metrics=ga%253Asessions%252Cga%253Apageviews
   //var profileId = firstProfile.getId();
@@ -611,7 +615,7 @@ var endDate = scriptProperties.getProperty('end_date');
       tableId,                    // Table id (format ga:xxxxxx).
       startDate,                  // Start-date (format yyyy-MM-dd).
       endDate,                    // End-date (format yyyy-MM-dd).
-      'ga:sessions,ga:pageviewsPerSession,ga:bounceRate,ga:percentNewSessions', // Comma seperated list of metrics.
+      'ga:sessions', // Comma seperated list of metrics.
       optArgs);
 
   if (results.getRows()) {
@@ -628,7 +632,7 @@ var endDate = scriptProperties.getProperty('end_date');
 
 
 
-function getReportDataForProfile_lavoro(tipo,firstProfile,filters) {
+function getReportDataForProfile_lavoro_direct(tipo,firstProfile,filters) {
 
   var profileId = "51871756";  // LAVORO profilo che si trova in https://ga-dev-tools.appspot.com/explorer/?metrics=ga%253Asessions%252Cga%253Apageviews
   //var profileId = firstProfile.getId();
@@ -662,7 +666,7 @@ var endDate = scriptProperties.getProperty('end_date');
       tableId,                    // Table id (format ga:xxxxxx).
       startDate,                  // Start-date (format yyyy-MM-dd).
       endDate,                    // End-date (format yyyy-MM-dd).
-      'ga:sessions,ga:pageviewsPerSession,ga:bounceRate,ga:percentNewSessions', // Comma seperated list of metrics.
+      'ga:sessions', // Comma seperated list of metrics.
       optArgs);
 
   if (results.getRows()) {
@@ -677,7 +681,7 @@ var endDate = scriptProperties.getProperty('end_date');
 /////////////////////////////////
 
 
-function getReportDataForProfile_motori(tipo,firstProfile,filters) {
+function getReportDataForProfile_motori_direct(tipo,firstProfile,filters) {
 
   var profileId = "51551214";  //  MOTORI profilo che si trova in https://ga-dev-tools.appspot.com/explorer/?metrics=ga%253Asessions%252Cga%253Apageviews
   //var profileId = firstProfile.getId();
@@ -711,7 +715,7 @@ var endDate = scriptProperties.getProperty('end_date');
       tableId,                    // Table id (format ga:xxxxxx).
       startDate,                  // Start-date (format yyyy-MM-dd).
       endDate,                    // End-date (format yyyy-MM-dd).
-      'ga:sessions,ga:pageviewsPerSession,ga:bounceRate,ga:percentNewSessions', // Comma seperated list of metrics.
+      'ga:sessions', // Comma seperated list of metrics.
       optArgs);
 
   if (results.getRows()) {
@@ -726,7 +730,7 @@ var endDate = scriptProperties.getProperty('end_date');
 /////////////////////////////////
 
 
-function getReportDataForProfile_formazione(tipo,firstProfile,filters) {
+function getReportDataForProfile_formazione_direct(tipo,firstProfile,filters) {
 
   var profileId = "51958562";  //  FORMAZIONE profilo che si trova in https://ga-dev-tools.appspot.com/explorer/?metrics=ga%253Asessions%252Cga%253Apageviews
   //var profileId = firstProfile.getId();
@@ -760,7 +764,7 @@ var endDate = scriptProperties.getProperty('end_date');
       tableId,                    // Table id (format ga:xxxxxx).
       startDate,                  // Start-date (format yyyy-MM-dd).
       endDate,                    // End-date (format yyyy-MM-dd).
-      'ga:sessions,ga:pageviewsPerSession,ga:bounceRate,ga:percentNewSessions', // Comma seperated list of metrics.
+      'ga:sessions', // Comma seperated list of metrics.
       optArgs);
 
   if (results.getRows()) {
