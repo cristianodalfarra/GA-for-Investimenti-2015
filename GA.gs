@@ -109,11 +109,18 @@ function runDemo_test() {
                             }
     else { printempty('WickedinLavoro'); }
     
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~Wickedinauto,ga:campaign=~Wickedinmoto');
-      if (results!=undefined){ outputToSpreadsheet(results,'WickedinMotori');   //outputToSpreadsheet_tot(results,'WickedinMotori');  
+    // Wickedin auto
+    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~Wickedinauto');
+      if (results!=undefined){ outputToSpreadsheet(results,'WickedinAuto');   //outputToSpreadsheet_tot(results,'WickedinMotori');  
                              outputToSpreadsheet_tot_row_ga_data(results,'',tab1,29,4);
                              }
-    else { printempty('WickedinMotori'); }
+    else { printempty('WickedinAuto'); }
+    // Wickedin moto
+    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~Wickedinmoto');
+      if (results!=undefined){ outputToSpreadsheet(results,'WickedinMoto');   //outputToSpreadsheet_tot(results,'WickedinMotori');  
+                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,75,4);
+                             }
+    else { printempty('WickedinMoto'); }
     //////////////// Wickedin
     
     
@@ -133,6 +140,40 @@ function runDemo_test() {
                             }
     else { printempty('Criteolavoro'); }
                              
+    
+    var results = getReportDataForProfile_lavoro('ga:campaign',firstProfile,'ga:campaign=~criteomidfunnel');
+    if (results!=undefined) {    outputToSpreadsheet(results,'criteomidfunnel');    //outputToSpreadsheet_tot(results,'CriteoLavoro'); 
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,76,4);
+                            }
+    else { printempty('criteomidfunnel'); }
+    
+    var results = getReportDataForProfile_lavoro('ga:campaign',firstProfile,'ga:campaign=~ligatus');
+    if (results!=undefined) {    outputToSpreadsheet(results,'ligatus');    //outputToSpreadsheet_tot(results,'CriteoLavoro'); 
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,77,4);
+                            }
+    else { printempty('ligatus'); }
+    
+    var results = getReportDataForProfile_lavoro('ga:campaign',firstProfile,'ga:campaign=~taboola');
+    if (results!=undefined) {    outputToSpreadsheet(results,'taboola');    //outputToSpreadsheet_tot(results,'CriteoLavoro'); 
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,78,4);
+                            }
+    else { printempty('taboola'); }
+    
+    
+    var results = getReportDataForProfile_lavoro('ga:campaign',firstProfile,'ga:campaign=~Chameleon');
+    if (results!=undefined) {    outputToSpreadsheet(results,'Chameleon');    //outputToSpreadsheet_tot(results,'CriteoLavoro'); 
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,79,4);
+                            }
+    else { printempty('Chameleon'); }
+    
+    var results = getReportDataForProfile_lavoro('ga:campaign',firstProfile,'ga:campaign=~_4W');
+    if (results!=undefined) {    outputToSpreadsheet(results,'4W');    //outputToSpreadsheet_tot(results,'CriteoLavoro'); 
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,80,4);
+                            }
+    else { printempty('_4W'); }
+    
+    
+
 
         var results = getReportDataForProfile_motori('ga:campaign',firstProfile,'ga:campaign=~lower_funnel');
     if (results!=undefined) {    outputToSpreadsheet(results,'CriteoMotori');    //outputToSpreadsheet_tot(results,'CriteoLavoro'); 
@@ -336,7 +377,7 @@ function runDemo_test() {
     /////indeed
     
     //Immobiliare
-    var results = getReportDataForProfile_original('ga:source',firstProfile,'ga:source=~immobiliare.it');
+    var results = getReportDataForProfile_original('ga:source',firstProfile,'ga:source=@immobiliare.it');
     if (results!=undefined) {    outputToSpreadsheet(results,'immobiliare.it');    //outputToSpreadsheet_tot(results,'Immobiliare.it');
                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,6,4);
                             }
@@ -457,6 +498,18 @@ function runDemo_test() {
                             }
     else { printempty('bancalavoroRU'); }
     //bancalavoroRU r=62
+    
+    
+    
+        //taboolacase r=74
+    
+      var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~taboolacase');
+    if (results!=undefined) {outputToSpreadsheet(results,'taboolacase');    
+                            outputToSpreadsheet_tot_row_ga_data(results,'',tab1,74,4);
+                            }
+    else { printempty('~taboolacase'); }
+   
+
     
     
     

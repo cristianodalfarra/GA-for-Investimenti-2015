@@ -40,8 +40,8 @@ function run_report_1_data()
   /* eseguire una riga per volta */
   /*scrivere sullo stesso tab */
   // +++++++++++++++++++++++++++++++++++++
-  if (getLastNdays(0)=="2017-05-03")   {clear_sheet(0);  prop ("2017-03-01","2017-03-31",26);runDemo_test();runDemo_FB();runDemo_tiscali();runDemo_gnocca(); } 
-  if (getLastNdays(0)=="2017-04-03")   {clear_sheet(0);  prop ("2017-03-01","2017-03-31",26);runDemo_direct();runDemo_FB_direct();runDemo_tiscali_direct();runDemo_gnocca_direct();} 
+  if (getLastNdays(0)=="2017-09-27")   {clear_sheet(0);  prop ("2017-09-01","2017-09-30",26);runDemo_test();runDemo_FB();runDemo_tiscali();runDemo_gnocca(); } 
+ // if (getLastNdays(0)=="2017-07-04")   {clear_sheet(0);  prop ("2017-06-01","2017-06-30",26);runDemo_direct();runDemo_FB_direct();runDemo_tiscali_direct();runDemo_gnocca_direct();} 
   // +++++++++++++++++++++++++++++++++++++
 }
 

@@ -110,14 +110,28 @@ function runDemo_direct() {
                             }
     else { printempty('WickedinLavoro'); }
     
-    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~Wickedinauto,ga:campaign=~Wickedinmoto;ga:eventCategory==trafficoDirect');
-      if (results!=undefined){ outputToSpreadsheet(results,'WickedinMotori');   //outputToSpreadsheet_tot(results,'WickedinMotori');  
+    // WickedinAuto
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~Wickedinauto;ga:eventCategory==trafficoDirect');
+      if (results!=undefined){ outputToSpreadsheet(results,'Wickedinauto');   //outputToSpreadsheet_tot(results,'WickedinMotori');  
                              outputToSpreadsheet_tot_row_ga_data(results,'',tab1,29,17);
                              }
-    else { printempty('WickedinMotori'); }
-    //////////////// Wickedin
+    else { printempty('WickedinAuto'); }
     
+    //  WickedinMoto
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~Wickedinmoto;ga:eventCategory==trafficoDirect');
+      if (results!=undefined){ outputToSpreadsheet(results,'WickedinMoto');   //outputToSpreadsheet_tot(results,'WickedinMotori');  
+                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,75,17);
+                             }
+    else { printempty('WickedinMoto'); }
+    //////////////// Wickedin fine
     
+    // taboolacase r=74
+    
+    var results = getReportDataForProfile_direct('ga:campaign',firstProfile,'ga:campaign=~taboolacase;ga:eventCategory==trafficoDirect');
+      if (results!=undefined){ outputToSpreadsheet(results,'taboolacase');   //outputToSpreadsheet_tot(results,'WickedinMotori');  
+                             outputToSpreadsheet_tot_row_ga_data(results,'',tab1,74,17);
+                             }
+    else { printempty('taboolacase'); }
     
     
     /// Criteo

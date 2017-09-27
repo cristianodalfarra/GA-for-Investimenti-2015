@@ -36,7 +36,7 @@ function runDemo_FB() {
     
     
      //Facebook Adv Affitti (facebookcamera|facebookmonolocale|facebookbilocale|facebooktrilocale|facebookaffittomain)
-    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~(facebook(.*)camera|facebook(.*)monolocale|facebook(.*)bilocale|facebook(.*)trilocale|facebook(.*)affittomain)');
+    var results = getReportDataForProfile_original('ga:campaign',firstProfile,'ga:campaign=~(facebook(.*)camera|facebook(.*)monolocale|facebook(.*)bilocale|facebook(.*)trilocale|facebook(.*)aff|facebookaffitto(.*))');
     if (results!=undefined) {outputToSpreadsheet(results,'Facebook Adv Affitti');    
                              
                              outputToSpreadsheet_tot_row_ga_data(results,'risposta',tab1,70,4); // (...,...,tab,rowstart,colstart)

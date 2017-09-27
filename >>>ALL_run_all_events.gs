@@ -1,29 +1,3 @@
-///////////////////////////////////////////////
-// esecuzione degli script degli eventi.
-///////////////////////////////////////////////
-
-//==============================================
-
-function run_all_scripts_events_1() {
-  runDemo_test_events();
-}
-
-
-function run_all_scripts_events_2() {
- runDemo_test_events_2();
-}
-
-
-
-function run_all_scripts_events_3() {
-  runDemo_FB_events();
-  runDemo_tiscali_events ();  //tiscali
-  runDemo_gnocca_events();    //gnoccaforum e gnoccatravel
-  
-}
-
-//==============================================
-
 
 
 
@@ -54,6 +28,10 @@ if (getLastNdays(0)=="2016-12-02")   {prop ("2016-11-01","2016-11-30",26);run_al
   if (getLastNdays(0)=="2017-01-11")   {prop ("2016-12-01","2016-12-31",26);run_all_scripts_events_1();} 
 if (getLastNdays(0)=="2017-03-02")   {prop ("2017-02-01","2017-02-28",26);run_all_scripts_events_1();} 
   if (getLastNdays(0)=="2017-04-03")   {prop ("2017-03-01","2017-03-31",26);run_all_scripts_events_1();} 
+  if (getLastNdays(0)=="2017-06-21")   {prop ("2017-05-01","2017-05-31",26);run_all_scripts_events_1();}
+  if (getLastNdays(0)=="2017-07-03")   {prop ("2017-06-01","2017-06-30",26);run_all_scripts_events_1();}
+  if (getLastNdays(0)=="2017-08-23")   {prop ("2017-07-01","2017-07-31",26);run_all_scripts_events_1();}
+  if (getLastNdays(0)=="2017-09-27")   {prop ("2017-09-01","2017-09-30",26);run_all_scripts_events_1();}
 }
 
 
@@ -81,6 +59,9 @@ if (getLastNdays(0)=="2017-01-11")   {prop ("2016-12-01","2016-12-31",26);run_al
 if (getLastNdays(0)=="2017-02-02")   {prop ("2017-01-01","2017-01-31",26);run_all_scripts_events_2();} 
 if (getLastNdays(0)=="2017-03-02")   {prop ("2017-02-01","2017-02-28",26);run_all_scripts_events_2();} 
   if (getLastNdays(0)=="2017-04-03")   {prop ("2017-03-01","2017-03-31",26);run_all_scripts_events_2();} 
+if (getLastNdays(0)=="2017-06-21")   {prop ("2017-05-01","2017-05-31",26);run_all_scripts_events_2();} 
+if (getLastNdays(0)=="2017-07-03")   {prop ("2017-06-01","2017-06-30",26);run_all_scripts_events_2();}
+if (getLastNdays(0)=="2017-09-04")   {prop ("2017-08-01","2017-08-31",26);run_all_scripts_events_2();}
 }
 
 
@@ -111,6 +92,9 @@ if (getLastNdays(0)=="2017-01-11")   {prop ("2016-12-01","2016-12-31",26);run_al
 if (getLastNdays(0)=="2017-02-28")   {prop ("2017-02-01","2017-02-28",26);run_all_scripts_events_3();} 
 if (getLastNdays(0)=="2017-03-02")   {prop ("2017-02-01","2017-02-28",26);run_all_scripts_events_3();} 
   if (getLastNdays(0)=="2017-04-03")   {prop ("2017-03-01","2017-03-31",26);run_all_scripts_events_3();} 
+if (getLastNdays(0)=="2017-06-22")   {prop ("2017-05-01","2017-05-31",26);run_all_scripts_events_3();} 
+if (getLastNdays(0)=="2017-07-03")   {prop ("2017-06-01","2017-06-30",26);run_all_scripts_events_3();}
+  if (getLastNdays(0)=="2017-09-04")   {prop ("2017-08-01","2017-08-31",26);run_all_scripts_events_3();}
 }
 
 
@@ -130,7 +114,7 @@ function run_MCF_1_events()
   if (getLastNdays(0)=="2016-07-04")   {prop ("2016-06-01","2016-06-30",23);MCF_runDemo_test_events();} 
 if (getLastNdays(0)=="2016-08-09")   {prop ("2016-07-01","2016-07-31",24);MCF_runDemo_test_events();} 
   if (getLastNdays(0)=="2016-09-02")   {prop ("2016-08-01","2016-08-31",25);MCF_runDemo_test_events();} 
-  if (getLastNdays(0)=="2016-10-10")   {prop ("2016-09-01","2016-09-30",26);MCF_runDemo_test_events();} 
+  if (getLastNdays(0)=="2017-06-21")   {prop ("2017-05-01","2017-05-31",26);run_all_scripts_events_3();} 
 }
 
 
@@ -178,3 +162,32 @@ function run_MCF_criteo_test()
   //if (getLastNdays(0)=="2016-04-11")   {prop ("2016-01-01","2016-03-31",21);  MCF_criteo_test();} 
   if (getLastNdays(0)=="2016-04-11")   {prop ("2015-01-01","2015-03-31",22);  MCF_criteo_test();} 
 }
+
+
+
+///////////////////////////////////////////////
+// esecuzione degli script degli eventi.
+///////////////////////////////////////////////
+
+//==============================================
+
+function run_all_scripts_events_1() {
+  runDemo_test_events();
+}
+
+
+function run_all_scripts_events_2() {
+ runDemo_test_events_2();
+}
+
+
+
+function run_all_scripts_events_3() {
+  runDemo_FB_events();
+  runDemo_tiscali_events ();  //tiscali
+  runDemo_gnocca_events();    //gnoccaforum e gnoccatravel
+  
+}
+
+//==============================================
+

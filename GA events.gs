@@ -319,23 +319,55 @@ function runDemo_test_events() {
    else { printempty_events('telefono', 'Wickedinlavoro'); }
    
    
-    // Motori
+    // auto
    
-    var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~Wickedinauto,ga:campaign=~Wickedinmoto;ga:eventaction=~risposta');
-   if (results!=undefined) {outputToSpreadsheet_events(results,'Wickedinauto+moto-risposta');   // outputToSpreadsheet_tot_events(results,'risposta', 'Wickedinauto+moto');
+    var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~Wickedinauto;ga:eventaction=~risposta');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'Wickedinauto-risposta');   // outputToSpreadsheet_tot_events(results,'risposta', 'Wickedinauto+moto');
                            outputToSpreadsheet_tot_row_ga_events(results,'risposta',tab1,29,9);
                            }
-   else { printempty_events('risposta', 'Wickedinauto+moto'); }
+   else { printempty_events('risposta', 'Wickedinauto'); }
    
-   var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~Wickedinauto,ga:campaign=~Wickedinmoto;ga:eventaction=~telefono');
-   if (results!=undefined) {outputToSpreadsheet_events(results,'Wickedinauto+moto-telefono');   // outputToSpreadsheet_tot_events(results,'telefono', 'Wickedinauto+moto');
+   var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~Wickedinauto;ga:eventaction=~telefono');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'Wickedinmoto-telefono');   // outputToSpreadsheet_tot_events(results,'telefono', 'Wickedinauto+moto');
                            outputToSpreadsheet_tot_row_ga_events(results,'telefono',tab1,29,10); 
                            }
-   else { printempty_events('telefono', 'Wickedinauto+moto'); }
+   else { printempty_events('telefono', 'Wickedinauto'); }
    
+    
    
    //////////////// Wickedin
    
+    // moto r=75
+   
+    var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~Wickedinmoto;ga:eventaction=~risposta');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'Wickedinmoto-risposta');   // outputToSpreadsheet_tot_events(results,'risposta', 'Wickedinauto+moto');
+                           outputToSpreadsheet_tot_row_ga_events(results,'risposta',tab1,75,9);
+                           }
+   else { printempty_events('risposta', 'Wickedinmoto'); }
+   
+   var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~Wickedinmoto;ga:eventaction=~telefono');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'Wickedinmoto-telefono');   // outputToSpreadsheet_tot_events(results,'telefono', 'Wickedinauto+moto');
+                           outputToSpreadsheet_tot_row_ga_events(results,'telefono',tab1,75,10); 
+                           }
+   else { printempty_events('telefono', 'Wickedinmoto'); }
+   
+    
+    // taboolacase r=74
+   
+    var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~taboolacase;ga:eventaction=~risposta');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'taboolacase-risposta');   
+                           outputToSpreadsheet_tot_row_ga_events(results,'risposta',tab1,74,9);
+                           }
+   else { printempty_events('risposta', 'taboolacase'); }
+   
+   var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~taboolacase;ga:eventaction=~telefono');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'taboolacase-telefono');   
+                           outputToSpreadsheet_tot_row_ga_events(results,'telefono',tab1,74,10); 
+                           }
+   else { printempty_events('telefono', 'taboolacase'); }
+   
+    
+    
  
    /// Criteo
      //case
@@ -366,7 +398,78 @@ function runDemo_test_events() {
                            }
    else { printempty_events('telefono', 'criteolavoro'); }
    
+   ///
+    var results = getReportDataForProfile_events_lavoro('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~criteomidfunnel;ga:eventaction=~risposta');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'criteomidfunnel-risposta');    //outputToSpreadsheet_tot_events(results,'risposta', 'criteomidfunnel');
+                           outputToSpreadsheet_tot_row_ga_events(results,'risposta',tab1,76,9);
+                           }
+   else { printempty_events('risposta', 'criteomidfunnel'); }
    
+   var results = getReportDataForProfile_events_lavoro('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~criteomidfunnel;ga:eventaction=~telefono');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'criteomidfunnel-telefono');  //  outputToSpreadsheet_tot_events(results,'telefono', 'criteomidfunnel');
+                           outputToSpreadsheet_tot_row_ga_events(results,'telefono',tab1,76,10); 
+                           }
+   else { printempty_events('telefono', 'criteomidfunnel'); }
+    ///
+    
+       var results = getReportDataForProfile_events_lavoro('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~ligatus;ga:eventaction=~risposta');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'ligatus-risposta');    //outputToSpreadsheet_tot_events(results,'risposta', 'ligatus');
+                           outputToSpreadsheet_tot_row_ga_events(results,'risposta',tab1,77,9);
+                           }
+   else { printempty_events('risposta', 'ligatus'); }
+   
+   var results = getReportDataForProfile_events_lavoro('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~ligatus;ga:eventaction=~telefono');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'ligatus-telefono');  //  outputToSpreadsheet_tot_events(results,'telefono', 'ligatus');
+                           outputToSpreadsheet_tot_row_ga_events(results,'telefono',tab1,77,10); 
+                           }
+   else { printempty_events('telefono', 'ligatus'); }
+    
+    //
+    
+       var results = getReportDataForProfile_events_lavoro('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~taboola;ga:eventaction=~risposta');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'taboola-risposta');    //outputToSpreadsheet_tot_events(results,'risposta', 'taboola');
+                           outputToSpreadsheet_tot_row_ga_events(results,'risposta',tab1,78,9);
+                           }
+   else { printempty_events('risposta', 'taboola'); }
+   
+   var results = getReportDataForProfile_events_lavoro('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~taboola;ga:eventaction=~telefono');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'taboola-telefono');  //  outputToSpreadsheet_tot_events(results,'telefono', 'taboola');
+                           outputToSpreadsheet_tot_row_ga_events(results,'telefono',tab1,78,10); 
+                           }
+   else { printempty_events('telefono', 'taboola'); }
+
+    ///
+    
+     
+   var results = getReportDataForProfile_events_lavoro('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~Chameleon;ga:eventaction=~risposta');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'Chameleon-risposta');    //outputToSpreadsheet_tot_events(results,'risposta', 'Chameleon');
+                           outputToSpreadsheet_tot_row_ga_events(results,'risposta',tab1,79,9);
+                           }
+   else { printempty_events('risposta', 'Chameleon'); }
+   
+   var results = getReportDataForProfile_events_lavoro('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~Chameleon;ga:eventaction=~telefono');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'Chameleon-telefono');  //  outputToSpreadsheet_tot_events(results,'telefono', 'Chameleon');
+                           outputToSpreadsheet_tot_row_ga_events(results,'telefono',tab1,79,10); 
+                           }
+   else { printempty_events('telefono', 'Chameleon'); }
+    ///
+    
+   
+   var results = getReportDataForProfile_events_lavoro('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~_4W;ga:eventaction=~risposta');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'_4W-risposta');    //outputToSpreadsheet_tot_events(results,'risposta', '_4W');
+                           outputToSpreadsheet_tot_row_ga_events(results,'risposta',tab1,80,9);
+                           }
+   else { printempty_events('risposta', '_4W'); }
+   
+   var results = getReportDataForProfile_events_lavoro('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~_4W;ga:eventaction=~telefono');
+   if (results!=undefined) {outputToSpreadsheet_events(results,'_4W-telefono');  //  outputToSpreadsheet_tot_events(results,'telefono', '_4W');
+                           outputToSpreadsheet_tot_row_ga_events(results,'telefono',tab1,80,10); 
+                           }
+   else { printempty_events('telefono', '_4W'); }
+
+    
+    
+    
     //motori
    
    var results = getReportDataForProfile_events_motori('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~lower_funnel;ga:eventaction=~risposta');

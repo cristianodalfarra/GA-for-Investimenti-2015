@@ -55,14 +55,14 @@ function runDemo_FB_events() {
 //  
     
      //Facebook adv affitti
-    var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~(facebookcamera|facebookmonolocale|facebookbilocale|facebooktrilocale|facebookaffittomain);ga:eventaction=~rispost');
+    var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~(facebook(.*)camera|facebook(.*)monolocale|facebook(.*)bilocale|facebook(.*)trilocale|facebook(.*)affittomain);ga:eventaction=~rispost');
     if (results!=undefined) {outputToSpreadsheet_events(results,'Facebook adv affitti-risposta');    
                              //outputToSpreadsheet_tot_events(results,'risposta', 'gnoccatravelmassaggi');
                             outputToSpreadsheet_tot_row_ga_events(results,'risposta',tab1,70,9); // (...,...,tab,rowstart,colstart)
                             }
     else { printempty_events('risposta', 'Facebook adv affitti'); }
     
-     var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~(facebookcamera|facebookmonolocale|facebookbilocale|facebooktrilocale|facebookaffittomain);ga:eventaction=~telefono');
+     var results = getReportDataForProfile_events('ga:eventaction,ga:campaign',firstProfile,'ga:campaign=~(facebook(.*)camera|facebook(.*)monolocale|facebook(.*)bilocale|facebook(.*)trilocale|facebook(.*)affittomain);ga:eventaction=~telefono');
     if (results!=undefined) {outputToSpreadsheet_events(results,'Facebook adv affitti-telefono');    
                             // outputToSpreadsheet_tot_events(results,'telefono', 'gnoccatravelmassaggi');
                              outputToSpreadsheet_tot_row_ga_events(results,'risposta',tab1,70,10); // (...,...,tab,rowstart,colstart)
